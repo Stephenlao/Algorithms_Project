@@ -7,7 +7,7 @@ The task is to guide an explorer through an 8x8 grid (representing a mysterious 
 - Occasionally, an asterisk * appears in the sequence, allowing the explorer to choose any direction at that step.
 The goal is to visit each cell of the grid exactly once in exactly 63 moves.  For example, the path of Fig. 1 consists of the following 63 directions:
 #### DDDDDDRUUUUUURDDDDDDRUUUUUURDDDDDDRUUUUUURRDLDRDLDRDLDRDLLLLLLL
-![alt text](image.png)
+![alt text](README.png)
 ---
 
 ## Constraints
