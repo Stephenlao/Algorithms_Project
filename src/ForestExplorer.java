@@ -10,7 +10,7 @@ public class ForestExplorer {
     private static int totalPaths = 0;
 
     public static void main(String[] args) {
-        String path = "*****DR******R******R********************R*D************L******"; // 9 mins // Input path
+        String path = "*****DR******R******R********************R*D************L******"; // 12 mins // Input path
         if (path.length() != 63 || !validatePath(path)) {
             System.out.println("Invalid input.");
             return;

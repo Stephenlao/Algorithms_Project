@@ -81,7 +81,7 @@
 
 
 
-public class ForestExplorer2 {
+public class ForestExplorer2 { // around 8 mins
 
     private static final int GRID_SIZE = 8;
     private static boolean[][] visited = new boolean[GRID_SIZE][GRID_SIZE];
