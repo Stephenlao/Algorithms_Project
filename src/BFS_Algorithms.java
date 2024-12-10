@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class BFS_Algorithms {
 
     private static final int GRID_SIZE = 8;
@@ -5,24 +7,35 @@ public class BFS_Algorithms {
     private static long pathCount = 0;
 
     public static void main(String[] args) {
-        String input = "*****DR******R******R********************R*D************L******"; // All '*'
-        if (args.length > 0) {
-            input = args[0];
+        start();
+    }
+
+    public static void start() {
+        while (true) { // Loop until valid input is provided
+            String input = getInput(); // Get input from the user
+
+            if (!isValidInput(input)) {
+                System.out.println("Invalid input. Input must be a string of 63 characters containing only 'U', 'D', 'L', 'R', or '*'.");
+                continue; // Ask again if input is invalid
+            }
+
+            System.out.println("Waiting...");
+            long startTime = System.currentTimeMillis();
+
+            long visitedMask = 1L; // start at (0,0) visited
+            explorePaths(input, 0, 0, 0, visitedMask);
+
+            long endTime = System.currentTimeMillis();
+            System.out.println("Total paths: " + pathCount);
+            System.out.println("Time (ms): " + (endTime - startTime));
+            break; // Exit the loop after successful execution
         }
+    }
 
-        if (!isValidInput(input)) {
-            System.out.println("Invalid input. Must be 63 chars of U,D,L,R,*");
-            return;
-        }
-
-        long startTime = System.currentTimeMillis();
-
-        long visitedMask = 1L; // start at (0,0) visited
-        explorePaths(input, 0, 0, 0, visitedMask);
-
-        long endTime = System.currentTimeMillis();
-        System.out.println("Total paths: " + pathCount);
-        System.out.println("Time (ms): " + (endTime - startTime));
+    private static String getInput() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Input the characters to test: ");
+        return scanner.nextLine();
     }
 
     private static boolean isValidInput(String input) {
