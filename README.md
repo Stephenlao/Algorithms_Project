@@ -37,12 +37,16 @@ The goal is to visit each cell of the grid exactly once in exactly 63 moves.  Fo
 ## Requirements
 #### 1. Pathfinding Logic:
 - Implement a method to explore all possible paths using DFS (Depth-First Search) and backtracking.
-#### 2. Output:
+
+#### 2. Validation method:
+- Implement method to validate input, ensuring input has 63 characters containing only 'U','D',
+'L','R' and '*'
+#### 3. Output:
 - Display the total number of valid paths.
 - Display the execution time in milliseconds.
 
-#### 3. Efficiency:
-- Optimize the program to run in less than 2 minutes.
+#### 4. Efficiency:
+- Improve the time complexity of code in order to run algorithms as fast as possible
 
 ---
 
